@@ -11,15 +11,15 @@ $(document).ready(function () {
             dataType: "json",
             success: function (respuesta) {
                 var divListaMenu = $("#lista-menu");
-                console.log(respuesta.data);
-                var collectionMenu = respuesta.data;
+                console.log(respuesta);
+                var collectionMenu = respuesta;
                 var newElement = "";
                 for (var i = 0; i < collectionMenu.length; i++) {
                     var dato = collectionMenu[i];
                     newElement +=
                         "<div class='card mt-4'>" +
                         "<img class='card-img-top img-fluid' src=" +
-                        dato.image +
+                        ${dato.image} +
                         " />" +
                         "<div class='card-body'>" +
                         "<h3 class='card-title'>" +
